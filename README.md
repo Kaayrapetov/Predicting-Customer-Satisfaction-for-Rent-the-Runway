@@ -6,9 +6,8 @@
 <br> &emsp;&emsp;1.BACKGROUND AND PROBLEM STATEMENT
 <br> &emsp;&emsp;2. DATA COLLECTION AND CLEANING
 <br> &emsp;&emsp;3. EXPLORATORY DATA ANALYSIS
-<br> &emsp;&emsp;4. FEATURE SELECTION
-<br> &emsp;&emsp;5. MODEL
-<br> &emsp;&emsp;6. CONCLUSIONS
+<br> &emsp;&emsp;4. MODEL
+<br> &emsp;&emsp;5. CONCLUSIONS
 
 ### 1.BACKGROUND AND PROBLEM STATEMENT
 <br> &emsp;&emsp;Rent the Runway is an e-commerce platform that allows users to rent, subscribe, or buy designer apparel and accessories. It was founded by Jennifer Hyman and Jennifer Fleiss, who launched the company in November 2009.
@@ -32,7 +31,7 @@ becomes
 <br>&emsp;&emsp; **Dress_Style:** Hourglass 
 
 
-The cleaned data set has about 156,433 observations. 
+The cleaned data set has 156,433 observations. 
 
 **Features describing the customer:**  Type_of_customer, Size of the garment customer rented, Size the customer usually wears, Height, Age, Bust Size, Body Type, Weight, Season the garment was rented, Reason the garment was rented, Overall fit of the garment  
 
@@ -50,11 +49,6 @@ Our representative garment is:
 <br> &emsp;&emsp;Sleeveless
 <br> &emsp;&emsp;Has a v-neckline
 <br> &emsp;&emsp;Has an hourglass shape 
-
-
-### 4.FEATURE SELECTION
-Using a Chi Squared test , we selected features that exhibit the most dependence with Customer Satisfaction. 
-
 
 ### 5.MODELS
 
