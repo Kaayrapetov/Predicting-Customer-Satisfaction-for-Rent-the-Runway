@@ -7,7 +7,7 @@
 <br> &emsp;&emsp;2. DATA COLLECTION AND CLEANING
 <br> &emsp;&emsp;3. EXPLORATORY DATA ANALYSIS
 <br> &emsp;&emsp;4. FEATURE SELECTION
-<br> &emsp;&emsp;5. MODELS
+<br> &emsp;&emsp;5. MODEL
 <br> &emsp;&emsp;6. CONCLUSIONS
 
 ### 1.BACKGROUND AND PROBLEM STATEMENT
@@ -20,16 +20,10 @@
 The website offers 7,980 different dresses. All the data for the dresses was scraped.  All the current  208,747 dress reviews were scraped from the website. 
 
 Overview of Data Cleaning: 
-* All the entries that were in the wrong column were re-entered in the correct column. Regex was used a lot for this purpose. 
-* Height was converted from feet and inches to just inches. 
+* All the entries that were in the wrong column were re-entered in the correct column. 
 * A new feature "BMI" was created out of the weight and height features. 
-* The date that the garment was rented was replaced with the season that the garment was rented. 
 * Rows where all of the customer measurements (Weight, Age, Height, Body Type) were missing were deleted. 
-* After the cleaning of the customer data, 161,418 observations remain. 
-
-* The Retail price of the dress, the Rent price of dress, the number of reviews left for the dress will be stripped off extra symbols and just turned into an integer. 
-* The product description will be broken up into three additional features: Sleeves, Neckline and Dress Style. 
-* For example:
+* The block of text describing the dress was used to create three new features: Sleeves, Neckline, Dress Style.
 <br> &emsp;&emsp; **Product Detail:** 'Blue printed cotton (69% Cotton, 27% Nylon, 4% Spandex). Hourglass. Sleeveless. Square neckline. 45" from shoulder to hemline.' <br>
 becomes 
 <br> &emsp;&emsp; **New Features:** 
@@ -51,6 +45,7 @@ Our representative customer is:
 <br> &emsp;&emsp;Size 10 
 <br> &emsp;&emsp;Renting mostly for special occasions like dates, vacations and weddings. 
 
+
 Our representative garment is: 
 <br> &emsp;&emsp;Sleeveless
 <br> &emsp;&emsp;Has a v-neckline
@@ -67,37 +62,15 @@ Using a Chi Squared test , we selected features that exhibit the most dependence
 1: Not Satisfied with Rental (Satisfaction Rating of 1,2,3 stars) 
 0: Satisfied with Rental (Satisfaction Rating 4,5 stars)
 
-#### Logistic Regression 
-<br>&emsp;&emsp;**Accuracy** - 0.836 
-<br>&emsp;&emsp;**ROC AUC** - 0.535
-
-#### Naive Bayes Classifier 
-<br>&emsp;&emsp;**Accuracy** - 0.803
-<br>&emsp;&emsp;**ROC AUC** - 0.629
-
-#### Knn Classifier 
-<br>&emsp;&emsp;**Accuracy** - 0.834
-<br>&emsp;&emsp;**ROC AUC** - 0.5320
-
-#### Random Classifier 
-<br>&emsp;&emsp;**Accuracy** - 0.8695
-<br>&emsp;&emsp;**ROC AUC** - 0.6642
-
-#### XGBoost  
-<br>&emsp;&emsp;**Accuracy** - 0.8698
-<br>&emsp;&emsp;**ROC AUC** - 0.6638
 
 
-
-<br> **For the Neural Network**
-<br>&emsp;&emsp;The numerical data was turned into categorical by binning along the 10 percentiles.  
-<br>&emsp;&emsp;Entity embedding was used on all the features. 
-<br>&emsp;&emsp;An Additional Batch Normalization Layer was added. 
+The model I used in this study is **Catboost Classification**.  **CatBoost** is an open source algorithm based on gradient boosted decision trees. It supports numerical, categorical and text features.
 
 
-<br> **Metrics for the Neural Network**
-<br>&emsp;&emsp; Accuracy:  0.8479
-<br>&emsp;&emsp; ROC AUC: 0.81281
+#### Classification Metrics
+<br>&emsp;&emsp;**Accuracy** - 0.93
+<br>&emsp;&emsp;**ROC AUC** - 0.81
+
 
 ### 6.CONCLUSIONS
 <br>&emsp;&emsp;We built a model that classifies whether a customer will be happy with their dress with 87% accuracy and is able to find 76% of customers who are not satisfied with the purchase. 
@@ -107,13 +80,14 @@ Using a Chi Squared test , we selected features that exhibit the most dependence
 
 Variable | Description | Values|
 ---------|-------------|-------|
+Type of Customer   | The customer is desginated as "Top Contributor" if they review items often|Top Contributor, unknown
 Size   | The size of the dress rented.|Sizes 0 to 24
-Overall_fit  | The overall fit of the garment as judged by customer. |True to Size, Large, Small, Unknown
 Rented_for |   the type of event for which the garment was rented. |Vacation, Wedding, Everyday, unknown, Party, Date, Work, Formal Affair 
 Size_usually_worn  | the size usually worn by the customer. | various sizes
-Height |  the reported height of the customer in inches. | various heights
-Age  |the reported age of the customer in years. |various ages
-Bust_size  | the reported bust size of  the customer.|various bustsizes
+Height |  the reported height of the customer in inches. | various heights in inches
+Age  |the reported age of the customer in years. |various ages in years
+Band_Size  | The band size of the customer's Bust Size |Integer values betwen 28 and 48. 
+Cup_Size  | The cup size of the customer's Bust Size |capital letter for Bust Size
 Body_type | what body type the customer thinks they have |athletic, hourglass, pear, straightnarrow, petite, unknown, fullbust, apple 
 Weight | the reported weight of the customer in pounds. |various weights
 Brand  |the brand of the dress|various brands
@@ -124,6 +98,7 @@ Number_of_reviews | the number of reviews left for the particular dress|integer 
 Sleeves | the type of sleeves on the garment has |sleeveless , long_sleeves, short_sleeves, three_quarter_sleeves, cap_sleeves, flutter_sleeves strapless, other 
 Neckline|the type of neckline on the garment |v_neckline, crew_neckline, high_neckline, square_neckline, off_shoulder, shirt_collar_neckline, boat_neckline, scoop_neckline, sweetheart, halter, straight_neckline, mock_neckline, cowl_neckline, turtleneck, other                     
 Dress_style| the cut of the bodice of the dress|hourglass,sheath, shift, gown,sleeveless, maxi,wrap, blouson, full skirt, short sleeves, a-line, long sleeves,empire_waist, cap sleeves, strapless, shirtdress, other 
+Fabric | A column was created for each of 13 most commonly occuring fabrics | A number between 0 and 100 designating the amount of given fabric in blend
 Rating | the number of stars out of five stars that the customer left rated the garment with.| out of five stars
 
 
