@@ -1,16 +1,20 @@
-# Predicting Customer Satisfaction for Rent the Runway
-## Katrin Ayrapetov
-## Table of Contents
-<br> &emsp;&emsp;1.BACKGROUND AND PROBLEM STATEMENT
-<br> &emsp;&emsp;2. DATA COLLECTION AND CLEANING
-<br> &emsp;&emsp;3. EXPLORATORY DATA ANALYSIS
-<br> &emsp;&emsp;4. MODEL
-<br> &emsp;&emsp;5. CONCLUSIONS
+# **Predicting Customer Satisfaction for Rent the Runway**
 
-### 1.BACKGROUND AND PROBLEM STATEMENT
-<br> &emsp;&emsp;Rent the Runway is an e-commerce platform that allows users to rent, subscribe, or buy designer apparel and accessories. It was founded by Jennifer Hyman and Jennifer Fleiss, who launched the company in November 2009.
-<br> &emsp;&emsp; The customer success department at Rent the Runway would like to be able to predict which customers are more likely to not be satisfied with their rental. Those customers then can be reached directly with proactive “Win Back” promotions to ensure repeat service and a chance for a positive rental experience to take place in the future.   
-<br> &emsp;&emsp;Using historic data for 160,000 dress rentals, a classification model was built to determine whether a customer will be satisfied with the rental with 93% accuracy. 
+[**Katrin Ayrapetov**](https://github.com/Kaayrapetov)
+
+### Contents:
+* Background and Problem Statement
+* Data Collection and Cleaning
+* Exploratory Data Analysis
+* Model 
+* Conclusions
+
+### **Background and Problem Statement**
+Rent the Runway is an e-commerce platform that allows users to rent, subscribe, or buy designer apparel and accessories. It was founded by Jennifer Hyman and Jennifer Fleiss, who launched the company in November 2009.
+
+The customer success department at Rent the Runway would like to be able to predict which customers are more likely to not be satisfied with their rental. Those customers then can be reached directly with proactive “Win Back” promotions to ensure repeat service and a chance for a positive rental experience to take place in the future.   
+
+Using historic data for 160,000 dress rentals, a classification model was built to determine whether a customer will be satisfied with the rental with 93% accuracy. 
 
 
 ### 2.DATA COLLECTION AND CLEANING
