@@ -1,7 +1,5 @@
 # Predicting Customer Satisfaction for Rent the Runway
 ## Katrin Ayrapetov
-
-
 ## Table of Contents
 <br> &emsp;&emsp;1.BACKGROUND AND PROBLEM STATEMENT
 <br> &emsp;&emsp;2. DATA COLLECTION AND CLEANING
