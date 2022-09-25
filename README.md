@@ -15,7 +15,7 @@ Rent the Runway is an e-commerce platform that allows users to rent, subscribe, 
 The customer success department at Rent the Runway would like to be able to predict which customers are more likely to not be satisfied with their rental. Those customers then can be reached directly with proactive “Win Back” promotions to ensure repeat service and a chance for a positive rental experience to take place in the future.   
 
 Using historic data for 160,000 dress rentals, a classification model was built to determine whether a customer will be satisfied with the rental with 93% accuracy. 
-
+<img src="Customer_Rating.png" width=600 />
 ### **Data Collection and Cleaning**
 
 The website offers 7,980 different dresses for rent. After a completed rental, each customer has a chance to leave an overall satisfaction rating for the rental as well as their measurements and demographic information. I scraped the garment description for each dress as well as the ratings and customer data for all reviews. 
