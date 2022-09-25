@@ -12,7 +12,7 @@
 ### 1.BACKGROUND AND PROBLEM STATEMENT
 <br> &emsp;&emsp;Rent the Runway is an e-commerce platform that allows users to rent, subscribe, or buy designer apparel and accessories. It was founded by Jennifer Hyman and Jennifer Fleiss, who launched the company in November 2009.
 <br> &emsp;&emsp; The customer success department at Rent the Runway would like to be able to predict which customers are more likely to not be satisfied with their rental. Those customers then can be reached directly with proactive “Win Back” promotions to ensure repeat service and a chance for a positive rental experience to take place in the future.   
-<br> &emsp;&emsp;  Using historic data for 160,000 customer rentals, a classification model was built to determine whether a customer will be satisfied with the rental with 93% accuracy. 
+<br> &emsp;&emsp;Using historic data for 160,000 dress rentals, a classification model was built to determine whether a customer will be satisfied with the rental with 93% accuracy. 
 
 
 ### 2.DATA COLLECTION AND CLEANING
