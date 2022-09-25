@@ -15,7 +15,7 @@ Rent the Runway is an e-commerce platform that allows users to rent, subscribe, 
 The customer success department at Rent the Runway would like to be able to predict which customers are more likely to not be satisfied with their rental. Those customers then can be reached directly with proactive “Win Back” promotions to ensure repeat service and a chance for a positive rental experience to take place in the future.   
 
 Using historic data for 160,000 dress rentals, a classification model was built to determine whether a customer will be satisfied with the rental with 93% accuracy. 
-<img src="Customer_Rating.png" width=600 />
+
 ### **Data Collection and Cleaning**
 
 The website offers 7,980 different dresses for rent. After a completed rental, each customer has a chance to leave an overall satisfaction rating for the rental as well as their measurements and demographic information. I scraped the garment description for each dress as well as the ratings and customer data for all reviews. 
@@ -27,10 +27,8 @@ The cleaned data set has about 160,000 observations.
 
 **Features describing the dress:** Retail Price of the garment, Rent price of the garment,  Number of Reviews left for that Garment, Dress Style, Sleeves and Neckline
 
+### **Exploratory Data Analysis**
 
-
-
-### 3.EXPLORATORY DATA ANALYSIS
 Our representative customer is: 
 <br> &emsp;&emsp;36 years old
 <br> &emsp;&emsp;5’4’’ and 140 pounds 
@@ -44,29 +42,24 @@ Our representative garment is:
 <br> &emsp;&emsp;Has an hourglass shape 
 
 
-### 4.FEATURE SELECTION
-Using a Chi Squared test , we selected features that exhibit the most dependence with Customer Satisfaction. 
-
-
-### 5.MODELS
+### **Model**
 
 **Target Variable:**
 1: Not Satisfied with Rental (Satisfaction Rating of 1,2,3 stars) 
 0: Satisfied with Rental (Satisfaction Rating 4,5 stars)
 
-
-
 The model I used in this study is **Catboost Classification**.  **CatBoost** is an open source algorithm based on gradient boosted decision trees. It supports numerical, categorical and text features.
-
 
 #### Classification Metrics
 <br>&emsp;&emsp;**Accuracy** - 0.93
 <br>&emsp;&emsp;**ROC AUC** - 0.81
 
 
-### 6.CONCLUSIONS
-<br>&emsp;&emsp;We built a model that classifies whether a customer will be happy with their dress with 87% accuracy and is able to find 76% of customers who are not satisfied with the purchase. 
+### **Conclusions**
+
+<br>&emsp;&emsp;We built a model that classifies whether a customer will be happy with their dress or not with 93% accuracy. 
 <br>&emsp;&emsp;It is recommended that those customers should be reached out to with a “Win Back” promotion even if they do not leave a negative review. 
+
 
 ##### Table 1. Data Dictionary
 
