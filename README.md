@@ -61,7 +61,7 @@ The model I used in this study is **Catboost Classification**.  **CatBoost** is 
 <br>&emsp;&emsp;It is recommended that those customers should be reached out to with a “Win Back” promotion even if they do not leave a negative review. 
 
 
-##### Table 1. Data Dictionary
+##### Table 1  Data Dictionary
 
 Variable | Description | Values|
 ---------|-------------|-------|
